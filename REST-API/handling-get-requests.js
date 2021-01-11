@@ -20,7 +20,7 @@ app.get('/courses/:id', (req, res) => {
     const course = coursesList.find(c => c.id === parseInt(req.params.id))
     console.log(course);
     if(!course){
-        res.status(404).send("Course with given Id not found.");
+        return res.status(404).send("Course with given Id not found.");
     }else{
         res.json(course);
     }
@@ -44,7 +44,7 @@ app.get('/courseslist', (req, res) =>{
 
 
 app.use("/*", (req, res) => {
-    res.status(404).send("404 Not Found...!");
+    return res.status(404).send("404 Not Found...!");
 });
 
 app.listen(port, () => console.log(`Server is running at ${port}`));
