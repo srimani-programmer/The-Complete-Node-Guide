@@ -9,7 +9,9 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "nodemon handling-put-requests.js"
+    "get": "nodemon handling-get-requests.js",
+    "post": "nodemon handling-post-requests.js",
+    "put": "nodemon handling-put-requests.js"
   },
   "keywords": [],
   "author": "",
